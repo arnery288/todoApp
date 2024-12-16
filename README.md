@@ -1,6 +1,7 @@
 # todoApp
 
 This is the Angular project setup with Tailwind CSS, Angular 19, and a custom folder structure.
+Edited from new-feature work-tree 
 
 ## Folder Structure
 ```bash
