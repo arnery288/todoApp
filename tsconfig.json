@@ -2,6 +2,18 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+      "paths": {
+      "@assets/*":     ["./src/assets/*"],
+      "@components/*": ["./src/app/components/*"],
+      "@core/*":       ["./src/app/core/*"],
+      "@env":          ["./src/environments/environment"],
+      "@features/*":   ["./src/app/features/*"],
+      "@layout/*":     ["./src/app/layout/*"],
+      "@pages/*":      ["./src/app/pages/*"],
+      "@services/*":   ["./src/app/services/*"],
+      "@shared/*":     ["./src/app/shared/*"],
+      "@styles/*":     ["./src/styles/*"]
+    },
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
