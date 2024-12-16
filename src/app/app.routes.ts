@@ -11,6 +11,7 @@ import { Test4Component } from '@core/pages/test4/test4/test4.component';
 import { Test5Component } from '@core/pages/test5/test5/test5.component';
 import { Test6Component } from '@core/pages/test6/test6/test6.component';
 import { SignalsComponent } from '@core/pages/signals/signals/signals.component';
+import { Test7Component } from '@core/pages/test7/test7/test7.component';
 
 export const routes: Routes = [
   {
@@ -53,6 +54,10 @@ export const routes: Routes = [
   {
     path: 'test6',
     component: Test6Component
+  },
+  {
+    path: 'test7',
+    component: Test7Component
   },
   {
     path: 'signals',
