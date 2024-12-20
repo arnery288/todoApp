@@ -1,11 +1,15 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { AsyncSubject } from 'rxjs';
+import { HeaderComponent } from "@shared/components/header/header.component";
 
 @Component({
   selector: 'app-test5',
   standalone: true,
-  imports: [],
-  template: `<p>test5 works!</p>`,
+  imports: [HeaderComponent],
+  template: `
+    <app-header />
+    <p>test5 works!</p>
+  `,
   styles: `
     :host {
       display: block;
@@ -33,7 +37,7 @@ export class Test5Component implements OnInit {
     subject.complete();
 
 
-    
+
   }
 
 }

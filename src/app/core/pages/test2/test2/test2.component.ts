@@ -1,11 +1,15 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { HeaderComponent } from "@shared/components/header/header.component";
 
 @Component({
   selector: 'app-test2',
   standalone: true,
-  imports: [],
-  template: `<p>test2 works!</p>`,
+  imports: [HeaderComponent],
+  template: `
+    <app-header />
+    <p>test2 works!</p>
+  `,
   styles: `
     :host {
       display: block;

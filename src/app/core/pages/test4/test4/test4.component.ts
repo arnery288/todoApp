@@ -1,11 +1,15 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { AsyncSubject } from 'rxjs';
+import { HeaderComponent } from "@shared/components/header/header.component";
 
 @Component({
   selector: 'app-test4',
   standalone: true,
-  imports: [],
-  template: `<p>test4 works!</p>`,
+  imports: [HeaderComponent],
+  template: `
+    <app-header />
+    <p>test4 works!</p>
+  `,
   styles: `
     :host {
       display: block;

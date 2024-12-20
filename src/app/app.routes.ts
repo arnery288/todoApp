@@ -12,6 +12,8 @@ import { Test5Component } from '@core/pages/test5/test5/test5.component';
 import { Test6Component } from '@core/pages/test6/test6/test6.component';
 import { SignalsComponent } from '@core/pages/signals/signals/signals.component';
 import { Test7Component } from '@core/pages/test7/test7/test7.component';
+import { AlertComponent } from '@shared/components/alert/alert.component';
+import { ControlFlowComponent } from '@core/pages/control-flow/control-flow/control-flow.component';
 
 export const routes: Routes = [
   {
@@ -62,6 +64,14 @@ export const routes: Routes = [
   {
     path: 'signals',
     component: SignalsComponent
+  },
+  {
+    path: 'alert',
+    component: AlertComponent
+  },
+  {
+    path: 'control-flow',
+    component: ControlFlowComponent
   },
   {
     path: '**',

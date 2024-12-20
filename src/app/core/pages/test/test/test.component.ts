@@ -1,12 +1,13 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { connect, connectable, from, Subject } from 'rxjs';
+import { HeaderComponent } from '@shared/components/header/header.component';
 
 @Component({
   selector: 'app-test',
   standalone: true,
-  imports: [],
+  imports: [HeaderComponent],
   template: `
-    <p>test works!</p>
+    <app-header />
     <div>
       <h3>Connectable observable</h3>
       <p>Sub 4:</p>

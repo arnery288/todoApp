@@ -1,55 +1,22 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
+import { ExampleService } from '@core/services/example.service';
+
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 
 import { map, Observable, of, tap, toArray } from 'rxjs';
-import { ExampleService } from '@core/services/example.service';
+
+// PrimeNG
+import { HeaderComponent } from "@shared/components/header/header.component";
 
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive, ReactiveFormsModule, FormsModule],
+  imports: [CommonModule, RouterOutlet, ReactiveFormsModule, FormsModule, HeaderComponent],
   template: `
+    <app-header />
     <p>layout works!</p>
-    <nav>
-      <ul>
-        <li><a routerLink="/login"    routerLinkActive="active" ariaCurrentWhenActive="page">Login</a></li>
-        <li><a routerLink="/register" routerLinkActive="active" ariaCurrentWhenActive="page">Register</a></li>
-        <li><a routerLink="/404"      routerLinkActive="active" ariaCurrentWhenActive="page">404</a></li>
-        <!-- Opcion 2 con Link parameter array
-          <li><a [routerLink]="['/login']"    routerLinkActive="active" ariaCurrentWhenActive="page">Login</a></li>
-          <li><a [routerLink]="['/register']" routerLinkActive="active" ariaCurrentWhenActive="page">Register</a></li>
-          <li><a [routerLink]="['/404']"      routerLinkActive="active" ariaCurrentWhenActive="page">404</a></li>
-        -->
-      </ul>
-    </nav>
-
-    <!-- --------------- -->
-    <label for="name">Name: </label>
-    <input id="name" type="text" [formControl]="name">
-    <p>Value: {{ name.value }}</p>
-
-    <form [formGroup]="profileForm">
-      <label for="first-name">First name: </label>
-      <input id="first-name" type="text" formControlName="firstName">
-
-      <label for="">Last name:</label>
-      <input id="last-name" type="text" formControlName="lastName">
-
-      <button (click)="onSubmit()">Send info</button>
-    </form>
-    <!-- ----------- -->
-
-    <p>{{ data$ | async }}</p>
-    <p>{{ dataPipe$ | async }}</p>
-
-    <p>Pipeable observable:</p>
-    @for(x of dataPipe$ | async; track $index) {
-      <span>{{ x }}</span>
-    } @empty {
-      <p>No numbers</p>
-    }
     <router-outlet />
     `,
   styleUrl: './layout.component.css',

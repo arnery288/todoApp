@@ -4,13 +4,15 @@ import { Subject } from 'rxjs';
 
 import { AuthService } from '@core/services/Auth.service';
 import { PasswordPipe } from '@shared/pipes/password.pipe';
+import { HeaderComponent } from "@shared/components/header/header.component";
 // import { login, logout } from '@methods/authMethods';
 
 @Component({
   selector: 'app-test6',
   standalone: true,
-  imports: [PasswordPipe],
+  imports: [PasswordPipe, HeaderComponent],
   template: `
+    <app-header />
     <p>test6 works!</p>
     @if (currentUser) {
       <div>
@@ -39,8 +41,8 @@ import { PasswordPipe } from '@shared/pipes/password.pipe';
 
     button {
       background-color: gray;
-      padding: 2px 5px;
       border-radius: 3px;
+      padding: 2px 5px;
     }
 
     .w {
