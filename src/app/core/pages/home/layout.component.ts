@@ -14,11 +14,7 @@ import { HeaderComponent } from "@shared/components/header/header.component";
   selector: 'app-layout',
   standalone: true,
   imports: [CommonModule, RouterOutlet, ReactiveFormsModule, FormsModule, HeaderComponent],
-  template: `
-    <app-header />
-    <p>layout works!</p>
-    <router-outlet />
-    `,
+  templateUrl: './layout.component.html',
   styleUrl: './layout.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

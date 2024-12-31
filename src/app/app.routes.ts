@@ -1,19 +1,20 @@
 import { Routes } from '@angular/router';
 
-import { ErrorComponent } from '@shared/pages/ErrorComponent/error404';
+import { AlertComponent } from '@shared/components/alert/alert.component';
+import { ControlFlowComponent } from '@core/pages/control-flow/control-flow/control-flow.component';
+import { ErrorComponent } from '@shared/pages/ErrorComponent/error404.component';
 import { LayoutComponent } from '@core/pages/home/layout.component';
 import { LoginComponent } from '@features/auth/login/login.component';
 import { RegisterComponent } from '@features/auth/register/register.component';
-import { TestComponent } from '@core/pages/test/test/test.component';
+import { SignalsComponent } from '@core/pages/signals/signals/signals.component';
+import { TableComponent } from '@core/pages/table/table/table.component';
 import { Test2Component } from '@core/pages/test2/test2/test2.component';
 import { Test3Component } from '@core/pages/test3/test3/test3.component';
 import { Test4Component } from '@core/pages/test4/test4/test4.component';
 import { Test5Component } from '@core/pages/test5/test5/test5.component';
 import { Test6Component } from '@core/pages/test6/test6/test6.component';
-import { SignalsComponent } from '@core/pages/signals/signals/signals.component';
 import { Test7Component } from '@core/pages/test7/test7/test7.component';
-import { AlertComponent } from '@shared/components/alert/alert.component';
-import { ControlFlowComponent } from '@core/pages/control-flow/control-flow/control-flow.component';
+import { TestComponent } from '@core/pages/test/test/test.component';
 
 export const routes: Routes = [
   {
@@ -74,9 +75,13 @@ export const routes: Routes = [
     component: ControlFlowComponent
   },
   {
-    path: '**',
-    redirectTo: '/home'
+    path: 'table',
+    component: TableComponent
   },
+  // {
+  //   path: '**',
+  //   redirectTo: '/home'
+  // },
   {
     path: '404',
     component: ErrorComponent

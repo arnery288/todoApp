@@ -2,8 +2,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Menubar } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
 
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -98,6 +96,24 @@ export class HeaderComponent {
                     ]
                 }
             ]
+        },
+        {
+            label: 'control-flow',
+            icon: 'pi pi-check',
+            routerLink: '/control-flow',
+            RouterLinkActive: 'active'
+        },
+        {
+            label: 'alert',
+            icon: 'pi pi-times',
+            routerLink: '/alert',
+            RouterLinkActive: 'active'
+        },
+        {
+            label: 'table',
+            icon: 'pi pi-user',
+            routerLink: '/table',
+            RouterLinkActive: 'active'
         },
         {
             label: '404',

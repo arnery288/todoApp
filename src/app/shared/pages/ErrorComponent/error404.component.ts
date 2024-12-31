@@ -1,10 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
+import { HeaderComponent } from '@shared/components/header/header.component';
+
 @Component({
   selector: 'app-error-component',
   standalone: true,
-  imports: [],
-  template: `<p>ErrorComponent works!</p>`,
+  imports: [HeaderComponent],
+  templateUrl: './error404.component.html',
   styles: `
     :host {
       display: block;

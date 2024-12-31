@@ -1,0 +1,55 @@
+<app-header />
+    <h1 class="text-sky-400 font-bold underline text-xl py-5 px-10 decoration-amber-500">Control Flow</h1>
+
+    <!-- Card -->
+    <div class="mb-4 p-8">
+        <p-card header="Operations">
+        <ng-template #header>
+            <img alt="Card" class="w-full" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+        </ng-template>
+        <ng-template #subtitle> List of available operations </ng-template>
+          <ol class="m-0">
+            <li>Addition: {{ addRes }}</li>
+            <li>Subtraction: {{ subtractRes }}</li>
+            <li>Multiply: {{ multiplyRes }}</li>
+            <li>Divide: {{ divideRes }}</li>
+          </ol>
+        <ng-template #footer>
+            <div class="flex gap-4 mt-1">
+                <p-button label="Cancel" severity="secondary" class="w-full" [outlined]="true" styleClass="w-full" />
+                <p-button label="Save" class="w-full" styleClass="w-full" />
+            </div>
+        </ng-template>
+        </p-card>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid gap-4 grid-cols-2 grid-rows-2 text-center">
+      <p class="bg-red-800 p-2 rounded">1</p>
+      <p class="bg-red-800 p-2 rounded">2</p>
+      <p class="bg-red-800 p-2 rounded">3</p>
+      <p class="bg-red-800 p-2 rounded">4</p>
+    </div>
+
+    <div class="container mx-auto bg-orange-500 rounded-md m-10 p-5">
+      <p>Container</p>
+    </div>
+
+    <div class="columns-3 text-center m-4 p-2">
+      <p class="bg-slate-600">Col 1</p>
+      <p class="bg-slate-400">Col 2</p>
+      <p class="bg-slate-200">Col 3</p>
+    </div>
+
+    <div class="flex">
+      <p class="bg-slate-600 m-2 p-2 hidden">Flex 1</p>
+      <p class="bg-slate-400 m-2 p-2">Flex 2</p>
+      <p class="bg-slate-200 m-2 p-2">Flex 3</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="bg-red-200">Column 1</div>
+      <div class="bg-blue-200">Column 2</div>
+      <div class="bg-green-200">Column 3</div>
+      <div class="bg-yellow-200">Column 4</div>
+    </div>
