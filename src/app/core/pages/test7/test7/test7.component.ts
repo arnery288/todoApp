@@ -2,18 +2,16 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
-// import { SHARED_IMPORTS } from '@shared/imports/shared-imports';
-
 // PrimeNG
+import { ButtonModule } from 'primeng/button';
 import { FloatLabel } from 'primeng/floatlabel';
 import { IconField } from 'primeng/iconfield';
 import { InputGroup } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
+
 import { InputIcon } from 'primeng/inputicon';
 import { InputNumber } from 'primeng/inputnumber';
 import { MessageService } from 'primeng/api';
-import { ButtonModule } from 'primeng/button';
-
 
 // Components
 import { LayoutComponent } from "@core/pages/home/layout.component";
@@ -22,16 +20,16 @@ import { LayoutComponent } from "@core/pages/home/layout.component";
   selector: 'app-test7',
   standalone: true,
   imports: [
-    ReactiveFormsModule,
     ButtonModule,
     FloatLabel,
-    ReactiveFormsModule,
     IconField,
     InputGroup,
     InputGroupAddonModule,
     InputIcon,
     InputNumber,
-    LayoutComponent
+    LayoutComponent,
+    ReactiveFormsModule,
+    ReactiveFormsModule,
   ],
   template: `
     <app-layout />
@@ -52,7 +50,6 @@ import { LayoutComponent } from "@core/pages/home/layout.component";
     </div>
 
     <p-floatlabel variant="on">
-        <!-- <input id="username" pInputText [(ngModel)]="value" autocomplete="off" class="ng-dirty ng-invalid" /> -->
         <label for="username">Username</label>
     </p-floatlabel>
 
@@ -70,10 +67,7 @@ import { LayoutComponent } from "@core/pages/home/layout.component";
       <p-inputgroup-addon>
         <i class="pi pi-calendar"></i>
       </p-inputgroup-addon>
-      <!-- <input pInputText [(ngModel)]="text1" placeholder="Calendar"> -->
     </p-inputgroup>
-
-    <!-- <p-inputmask mask="+5299999999" [(ngModel)]="text2" placeholder="Phone number" /> -->
 
     <div class="card flex justify-center">
         <form [formGroup]="formGroup">
